@@ -1,4 +1,10 @@
 <html lang="en">
+<!-- 
+  1.-hay que poner estilo 
+  
+  2.-que el tiempo de trabajo sea deacuerdo con el usuario(que no solo sea 25 minutos sino lo que desea el ciente)
+
+-->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +14,16 @@
 </head>
 <body>
   <div id="app">
-    <div id="time">
-      <div id="value"></div>
+    <div id="time" class="header-task">
       <div id="taskName"></div>
+      <div id="value"></div>
     </div> 
 
   <div class="tasks-container">
     <div class="form">
       <form action="" id="form">
-          <input type="text" id="itTask">
-          <input type="submit" id="bAdd"  value="Agregar Tarea">         
+          <input type="text" id="itTask" required class="text-box" placeholder="task...">
+          <input type="submit" id="bAdd"  value="Agregar Tarea" class="btn-task">         
       </form>
     </div>
     <div id="tasks">

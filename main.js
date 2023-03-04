@@ -38,7 +38,7 @@ function renderTasks() {
     
     return`
     <div class="task">
-           <div class="completed">${task.completed ? `<span class="done">Done</span>` : `<button class="start-button" data-id="${task.id}">Start</button>`}</div>
+           <div class="completed">${task.completed ? `<span class="done">Done</span>` : `<button class="start-button btn-task " data-id="${task.id}">Start</button>`}</div>
 
            <div class="title"> ${task.title}</div
     </div>`;
@@ -64,9 +64,9 @@ function renderTasks() {
 
 function startButtonHandler(id) {
   //siempre hay que poner con minutos asi
-  //here  se  cambia
-  time = 5;
- // time = 25 * 60;
+  //here  se  cambia(tiempo de trabajo-word-jod)
+  // time = 5;
+  time = (25 * 60)+1;
   current = id;
   const taskIndex = tasks.findIndex((task) => task.id === id);
   const taskName = document.querySelector("#time #taskName");
@@ -94,8 +94,9 @@ function timerHanlder(id) {
 } 
     
 function startBreak() {
-// time = 5 * 60;
-  time = 3;
+  // tiempo de reseso
+  time = (5 * 60)+1;
+  // time = 3;
   taskName.textContent = 'Break';
   timerBreak = setInterval(() => {
     timerBreakHanlder();
